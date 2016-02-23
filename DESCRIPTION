@@ -1,4 +1,4 @@
-Package: patternlist
+Package: patternapply
 Type: Package
 Title: Try Regular Expressions in Turn to Data
 Version: 0.1
