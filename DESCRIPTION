@@ -8,3 +8,4 @@ Maintainer: Eamon Caddigan <eamon.caddigan@gmail.com>
 Description: Extracts information from vectors (or columns) of text data that can take one of several formats by applying regular expressions in turn until a match is found. Mostly useful for ultimately turning such a vector into a data.frame.
 License: BSD 3
 LazyData: TRUE
+Suggests: testthat

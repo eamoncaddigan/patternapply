@@ -66,5 +66,8 @@ patternapply <- function(X, patterns,
   # This will probably be useful for people.
   attr(replacementList, "match_index") <- matchIndex
   
+  # S3 Object
+  class(replacementList) <- "replacement_list"
+  
   return(replacementList)
 }
