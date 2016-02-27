@@ -20,6 +20,8 @@ as.matrix.replacement_list <- function(x) {
   for (i in seq_along(x)) {
     rlMatrix[i, seq_along(x[[i]])] <- x[[i]]
   }
+
+  return(rlMatrix)
 }
 
 #' Convert a replacement_list object into a data.frame.
