@@ -5,7 +5,12 @@ Version: 0.1
 Date: 2016-02-19
 Author: Eamon Caddigan
 Maintainer: Eamon Caddigan <eamon.caddigan@gmail.com>
-Description: Extracts information from vectors (or columns) of text data that can take one of several formats by applying regular expressions in turn until a match is found. Mostly useful for ultimately turning such a vector into a data.frame.
+Description: Extracts information from vectors (or columns) of text data that
+    can take one of several formats by applying regular expressions in turn until
+    a match is found. Mostly useful for ultimately turning such a vector into a
+    data.frame.
 License: BSD 3
 LazyData: TRUE
-Suggests: testthat
+Suggests:
+    testthat
+RoxygenNote: 5.0.1

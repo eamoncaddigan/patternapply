@@ -26,3 +26,9 @@ test_that("Bad inputs raise errors", {
   expect_error(patternapply(letters, c("a", "b"), list("c")),
                "'patterns' and 'replacements' must have the same length")
 })
+
+test_that("Default arguments work", {
+  expect_equal(patternapply(paste(1:20), c("^[0-9]$", "^[0-9]{2}$"))[1:20], 
+               as.list(c(rep("1", 9), rep("2", 11))))
+})
+

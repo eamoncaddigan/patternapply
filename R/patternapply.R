@@ -3,14 +3,14 @@
 #'
 #' @param X A character vector where matches are sought.
 #' @param patterns A vector of regular expression patterns.
-#' @param replacements A list of replacement information, must match the length
-#'   of \code(patterns). Each element must be a character vector. This can
-#'   include backreferences "\1" to "\9" to parenthesized subexpressions of the
-#'   corresponding pattern.
+#' @param replacements A list of replacement information, which must match the 
+#' length of \code{patterns}. Each element must be a character vector. This can 
+#' include backreferences "\1" to "\9" to parenthesized subexpressions of the 
+#' corresponding pattern.
 #'
 #' @return A list of replacement vectors with class "replacement_list".
 patternapply <- function(X, patterns,
-                         replacements = list(paste(seq_along(patterns)))) {
+                         replacements = as.list(paste(seq_along(patterns)))) {
   # Check the inputs
   if (class(patterns) != "character") {
     stop("'patterns' must be a character vector")
