@@ -5,6 +5,8 @@
 #'
 #' @return A character matrix. Each row corresponds to an entry in the
 #'   replacement_list.
+#'   
+#' @export
 #'
 #' @method as.matrix replacement_list
 as.matrix.replacement_list <- function(x) {
@@ -31,6 +33,8 @@ as.matrix.replacement_list <- function(x) {
 #' @return A data.frame. Each row corresponds to an entry in the
 #'   replacement_list.
 #'
+#' @export
+#' 
 #' @method as.data.frame replacement_list
 as.data.frame.replacement_list <- function(x) {
   return(as.data.frame.matrix(as.matrix.replacement_list(x)))

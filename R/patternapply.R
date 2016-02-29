@@ -22,6 +22,8 @@ NULL
 #'
 #' @return A list of replacement vectors with class "replacement_list".
 #' 
+#' @export
+#' 
 #' @rdname patternapply_fun
 patternapply <- function(X, patterns,
                          replacements = as.list(paste(seq_along(patterns)))) {
