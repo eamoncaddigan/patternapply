@@ -1,14 +1,28 @@
+#' patternappy: A package for attempting to apply patterns to a vector.
+#' 
+#' This package contains the function \code{patternapply()}, which iteratively 
+#' tries to match a list of regular expressions to a vector and returns the
+#' associated replacement vector. This is useful for turning a column of text
+#' data with different formats into a matrix or data frame. S3 generics are also
+#' provided to assist with this.
+#' 
+#' @docType package
+#' @name patternapply
+NULL
+
 
 #' Iteratively try patterns against a character vector.
 #'
 #' @param X A character vector where matches are sought.
 #' @param patterns A vector of regular expression patterns.
 #' @param replacements A list of replacement information, which must match the 
-#' length of \code{patterns}. Each element must be a character vector. This can 
-#' include backreferences "\1" to "\9" to parenthesized subexpressions of the 
-#' corresponding pattern.
+#'   length of \code{patterns}. Each element must be a character vector. This
+#'   can include backreferences "\1" to "\9" to parenthesized subexpressions of
+#'   the corresponding pattern.
 #'
 #' @return A list of replacement vectors with class "replacement_list".
+#' 
+#' @rdname patternapply_fun
 patternapply <- function(X, patterns,
                          replacements = as.list(paste(seq_along(patterns)))) {
   # Check the inputs
