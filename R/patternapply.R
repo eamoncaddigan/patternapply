@@ -7,7 +7,7 @@
 #' provided to assist with this.
 #' 
 #' @docType package
-#' @name patternapply
+#' @name patternapply-package
 NULL
 
 
@@ -23,8 +23,6 @@ NULL
 #' @return A list of replacement vectors with class "replacement_list".
 #' 
 #' @export
-#' 
-#' @rdname patternapply_fun
 patternapply <- function(X, patterns,
                          replacements = as.list(paste(seq_along(patterns)))) {
   # Check the inputs
