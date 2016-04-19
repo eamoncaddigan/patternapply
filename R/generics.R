@@ -37,5 +37,6 @@ as.matrix.replacement_list <- function(x) {
 #' 
 #' @method as.data.frame replacement_list
 as.data.frame.replacement_list <- function(x) {
-  return(as.data.frame.matrix(as.matrix.replacement_list(x)))
+  return(as.data.frame.matrix(as.matrix.replacement_list(x),
+                              stringsAsFactors = FALSE))
 }
